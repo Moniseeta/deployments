@@ -18,3 +18,11 @@ data:
 
   # Set this to 1 to establish mTLS connection with CyberCenter
   #OFFLINE_CC_MTLS_ENABLE: "1"
+
+  # Optional environment variable, to set the max amount of consecutive attempts before back off. There will be a random interval between connection attempts. 
+  # (This and AQUA_CONNECTIVITY_BACKOFF_DURATION should both be set to trigger the backoff mechanism)
+  #AQUA_MAX_CONSECUTIVE_CONNECTION_ATTEMPTS: "5"
+
+  # Optional environment variable, to set the amount of time (in seconds) in which there is no attempt to connect. 
+  # Once this duration passes, the reconnect mechanisim will be triggered again till max attempts.
+  #AQUA_CONNECTIVITY_BACKOFF_DURATION: "120"
